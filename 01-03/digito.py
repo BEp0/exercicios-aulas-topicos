@@ -1,17 +1,18 @@
 # Escolher por número
-def por_numero(escolha):
-    escolha = str(input('Digite o dia da semana:'))
-    if escolha == '2':
+def por_numero(dia_da_semana):
+    if dia_da_semana == '2':
         escolha = 'segunda'
-    elif escolha == '3':
+    elif dia_da_semana == '3':
         escolha = 'terça'
-    elif escolha == '4':
+    elif dia_da_semana == '4':
         escolha = 'quarta'
-    elif escolha == '5':
+    elif dia_da_semana == '5':
         escolha = 'quinta'
-    elif escolha == '6':
+    elif dia_da_semana == '6':
         escolha = 'sexta'
-    else:
+    elif dia_da_semana == '1' or dia_da_semana == '7':
         escolha == 'fim de semana'
+    else:
+        escolha == 'inválida'
 
-    print(escolha)
+    print(f'O dia da semana é: {escolha}')
