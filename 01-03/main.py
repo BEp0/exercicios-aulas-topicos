@@ -23,12 +23,13 @@ def main():
     
     escolha_do_menu = str(input('Qual você escolhe?'))
     print(linha)
-    
+
     # ----- até aqui ok --------
 
     while not (escolha_do_menu == '1' or escolha_do_menu == '2'):
         print(f'{cores["vermelho"]}ERRO!!! Digite de novo...{cores["sem_cor"]}')
         escolha_do_menu = str(input('Qual você escolhe?'))
+        print(linha)
 
     if escolha_do_menu == '1':
         dia_da_semana = str(input('Digite o dia da semana:'))
