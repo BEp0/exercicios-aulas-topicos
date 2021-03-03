@@ -20,16 +20,16 @@ def main():
     print(f'{cores["vermelho"]}Atividade de Tópicos do dia 01/03!{cores["sem_cor"]}')
     print(linha)
     print(f'{cores["amarelo"]}Escolha uma das opções abaixo para realizar a operação:{cores["sem_cor"]}')
-    print(f'{cores["amarelo"]}[1]{cores["sem_cor"]} - Digitando o número do dia da semana \n (retorna o nome do dia)')
-    print(f'{cores["amarelo"]}[2]{cores["sem_cor"]} - Digitando o nome do dia da semana \n (retorna o número do dia)')
+    print(f'{cores["amarelo"]}[1]{cores["sem_cor"]} - Nessa opção você deverá digitar o número do dia da semana e o programa te retornará o nome deste dia \n (Ex.: 2 ==> Segunda)')
+    print(f'{cores["amarelo"]}[2]{cores["sem_cor"]} - Nessa opção você deverá digitar o nome do dia da semana e o programa te retornará o número deste dia \n (Ex.: Segunda ==> 2)')
     print(linha)
     
-    escolha_do_menu = str(input('Qual você escolhe?'))
+    escolha_do_menu = str(input('Digite aqui a sua escola [1 ou 2]:'))
     print(linha)
 
     while not (escolha_do_menu == '1' or escolha_do_menu == '2'):
         print(f'{cores["vermelho"]}ERRO!!! Digite de novo...{cores["sem_cor"]}')
-        escolha_do_menu = str(input('Qual você escolhe?'))
+        escolha_do_menu = str(input('Digite aqui a sua escola [1 ou 2]:'))
         print(linha)
 
     if escolha_do_menu == '1':
@@ -41,6 +41,8 @@ def main():
         print(linha)
         semanas_funcoes.por_escrita(escolha_do_dia)
     
+    print(linha)
+    print('__FIM__')
     print(linha)
 
 if __name__ == "__main__":

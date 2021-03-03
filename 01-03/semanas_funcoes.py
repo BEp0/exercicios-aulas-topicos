@@ -21,6 +21,11 @@ def por_numero(dia_da_semana):
     else:
         dia = 'inválido'
 
+    while dia == 'inválido':
+        escolha_do_dia = str(input('ERRO! Digite novamente número do dia da semana:'))
+        por_numero(escolha_do_dia)
+        print(linha)
+
     print(f'O dia da semana é: {dia.capitalize()}')
 
 # -----------------------------------------------------
@@ -41,6 +46,11 @@ def por_escrita(dia_da_semana):
     elif dia_da_semana == 'SEXTA':
         dia = '6'
     else:
-        dia = 'Inválido'
+        dia = 'inválido'
+
+    while dia == 'inválido':
+        escolha_do_dia = str(input('ERRO! Escrava novamente o nome do dia da semana:')).upper()
+        por_escrita(escolha_do_dia)
+        print(linha)
 
     print(f'O número do dia da semana é: {dia}')
