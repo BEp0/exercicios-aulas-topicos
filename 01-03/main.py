@@ -1,5 +1,7 @@
 import semanas_funcoes
 
+# ---------- frescuras ---------------------
+
 cores = {
     'sem_cor':'\033[m',
     'vermelho':'\033[31m',
@@ -7,14 +9,19 @@ cores = {
     'amarelo':'\033[33m',
 }
 
-linha = f'{cores["verde"]}-=' * 16 + f'{cores["sem_cor"]}'
+# -------------Variáveis------------------
 
+linha = f'{cores["verde"]}-=-' * 36 + f'{cores["sem_cor"]}'
 escolha_do_menu = ''
 escolha_do_dia = ''
 dia_da_semana = ''
 dia = ''
 
+# -----------------------------------------
+
 def main():
+
+# ---------------MENU------------------------
 
     print(linha)
     print(f'{cores["vermelho"]}Atividade de Tópicos do dia 01/03!{cores["sem_cor"]}')
@@ -27,20 +34,29 @@ def main():
     escolha_do_menu = str(input('Digite aqui a sua escola [1 ou 2]:'))
     print(linha)
 
+# ------------------------------------------
+
+# --------- Validação ----------------
+
     while not (escolha_do_menu == '1' or escolha_do_menu == '2'):
         print(f'{cores["vermelho"]}ERRO!!! Digite de novo...{cores["sem_cor"]}')
         escolha_do_menu = str(input('Digite aqui a sua escola [1 ou 2]:'))
         print(linha)
 
+# --------------------
+
+# ------Operações---------------------
+
     if escolha_do_menu == '1':
         escolha_do_dia = str(input('Digite número do dia da semana:'))
-        print(linha)
         semanas_funcoes.por_numero(escolha_do_dia)
     else:
         escolha_do_dia = str(input('Escreva o nome do dia da semana:')).upper()
-        print(linha)
-        semanas_funcoes.por_escrita(escolha_do_dia)
-    
+        semanas_funcoes.por_escrita(esolha_do_dia)
+
+# ------------------------------------
+
+# ------acabou------------
     print(linha)
     print('__FIM__')
     print(linha)
