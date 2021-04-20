@@ -1,7 +1,7 @@
 def criarPHE():
     
-    fonte = open('/home/souza/Documents/Programas-GitHub/Topicos-avancado/19-04/files-pdb/cadeiaA.pdb', 'r')
-    destino = open( '/home/souza/Documents/Programas-GitHub/Topicos-avancado/19-04/files-pdb/fenil.pdb', 'w' )
+    fonte = open('/home/souza/Documents/Programas-GitHub/Topicos-avancado/19-04/Entrega-Bernardo-Fenil/files-pdb/cadeiaA.pdb', 'r')
+    destino = open( '/home/souza/Documents/Programas-GitHub/Topicos-avancado/19-04/Entrega-Bernardo-Fenil/files-pdb/fenil.pdb', 'w' )
     cont = 0
     
     for i in fonte:
@@ -18,8 +18,8 @@ def criarPHE():
 
 def obtemCadeiaA():
     
-    fonte = open('/home/souza/Documents/Programas-GitHub/Topicos-avancado/19-04/files-pdb/7kms.pdb', 'r')
-    destino = open( '/home/souza/Documents/Programas-GitHub/Topicos-avancado/19-04/files-pdb/cadeiaA.pdb', 'w' )
+    fonte = open('/home/souza/Documents/Programas-GitHub/Topicos-avancado/19-04/Entrega-Bernardo-Fenil/files-pdb/7kms.pdb', 'r')
+    destino = open('/home/souza/Documents/Programas-GitHub/Topicos-avancado/19-04/Entrega-Bernardo-Fenil/files-pdb/cadeiaA.pdb', 'w' )
 
     for i in fonte:
         if ( i[:4] == 'ATOM' ):
