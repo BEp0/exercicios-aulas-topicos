@@ -1,3 +1,14 @@
+'''
+abrir um 3° arquivo 
+
+abrir o destino
+
+percorrer o destino e bravar no arquivo fenil
+
+as linhas onde tenho um carbono CA e o aminoacido é PHE
+'''
+
+
 def obtemCadeiaA():
     
     fonte = open( '7kms.pdb', 'r' ) #caminhos inventados, muda de acordo com a maquina
