@@ -52,7 +52,7 @@ a = Racional(2, 3)
 print ( a )
 b = Racional(4, 5)
 print ( b )
-c = a*b
+c = a * b
 print ( c )	  
 d = a + b
 print( d )
