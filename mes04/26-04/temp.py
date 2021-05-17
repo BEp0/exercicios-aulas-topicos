@@ -53,7 +53,6 @@ class operacoes:
             return str(f'{self.n1} % {self.n2} = {self.n1 % self.n2}\n')
 
 
-
 def aplicar_operacao(a, b, operation):
     if operation == '+':
         c = operacoes.mais(a, b, 0)
