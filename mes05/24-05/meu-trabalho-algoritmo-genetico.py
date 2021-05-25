@@ -17,7 +17,8 @@ _CONDICAO_PARADA = 200
 _MAXIMO_MUTACOES = 20
 _ALFABETO = 'ABCDEFGHIJKLMNOPQRSTUVXWYZ '
 _INICIO = 'WDLMNLT DTJBKWIRZREZLMQCO PZ'
-_ALVO = 'METHINKS IT IS LIKE A WEASEL'
+_ALVO = ['METHINKS IT IS LIKE A WEASEL',
+         'METHINKS IT IS LIKE AN APPLE', 'IGUESS THAT IS LIKE A WEASEL']
 
 
 def geraPopulacaoInicial():
@@ -33,6 +34,9 @@ def geraPopulacaoInicial():
 
 
 def calculaAdaptabilidade(populacao):
+    '''
+    pesquisar 3 frases, e a com maior indice será retornado
+    '''
     indice = []
     for i in range(_POPULACAO):
         indice.append(0)
@@ -40,9 +44,19 @@ def calculaAdaptabilidade(populacao):
     for i in range(_POPULACAO):
         indiceElemento = 1
         for j in range(_CROMOSSOMO):
-            if populacao[i][j] == _ALVO[j]:
-                indiceElemento = indiceElemento+10
-        indice[i] = indiceElemento
+            if populacao[i][j] == _ALVO[0][j]:
+                indiceElemento0 = indiceElemento+10
+            if populacao[i][j] == _ALVO[1][j]:
+                indiceElemento1 = indiceElemento+10
+            if populacao[i][j] == _ALVO[2][j]:
+                indiceElemento2 = indiceElemento+10
+        if indiceElemento2 < indiceElemento0 > indiceElemento1:
+            indice[i] = indiceElemento0
+        if indiceElemento2 < indiceElemento1 > indiceElemento0:
+            indice[i] = indiceElemento1
+        if indiceElemento0 < indiceElemento2 > indiceElemento1:
+            indice[i] = indiceElemento2
+
     return indice[:]
 
 
